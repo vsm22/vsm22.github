@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/milligram.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/vsm22.css" />
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font-awesome/css/all.min.css" />
+    <title>Vladimir Smirnov</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Vladimir Smirnov</h1>
+
+        <h2>Programmer, software and web developer</h2>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://github.com/vsm22" target="blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://www.linkedin.com/in/vsm22/" target="blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="projects">
+
+        <header>
+            <h1> Recent personal and learning projects: </h1>
+        </header>
+    
+        <article>
+
+            <header>
+
+                <h1> Anvil </h1>
+
+                <div class="short-description"> A music database browser and manager built with <em>Spring</em> and <em>React</em> </div>
+
+                <div class="technologies-used">Languages: <b> Java, JavaScript </b></div>
+
+                <div class="technologies-used">Technologies: <b>Spring Boot, Spring Web MVC, Spring Security, Java JWT, Hibernate, Hibernate Search, Jackson, Lombok, MySQL, React, React Router</b></div>
+          
+                <div class="technologies-used">
+                    Dev technologies: <b>Docker, Maven, npm, Webpack</b>
+                </div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/anvil" target="blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/anvil.gif" />
+
+            <div class="project-description">
+
+                <p>
+                Anvil is a music database browser and manager built with <b>Spring</b> and <b>React</b>. It allows users to 
+                search for music artists, place them in collections, like them, and recommend them to other users.
+                It was built as a learning project.
+                Here are some of its features and technologies:
+                </p>
+                
+                <ul>
+                    <li>
+                        RESTful backend architecture implemented using <b>Spring Web MVC</b>
+                    </li>
+                    <li>
+                        Authentication using <b>Spring Security</b> and <b>JSON Web Tokens</b>
+                    </li>
+                    <li>
+                        Front-end UI using <b>React</b>
+                    </li>
+                    <li>
+                        View routing using <b>React Router</b>
+                    </li>
+                    <li>
+                        Database using <b>MySQL</b>
+                    </li>
+                    <li>
+                        Back-end model mapping using <b>Hibernate</b> and <b>Jackson</b>
+                    </li>
+                    <li>
+                        Search indexing using <b>Hibernate Search</b>
+                    </li>
+                    <li>
+                        Java boilerplate using <b>Lombok</b>
+                    </li>
+                </ul>
+            </p>
+
+        </article>
+
+        <article>
+            <header>
+                <h2>KiteAudio</h2>
+
+                <div class="short-description">A UI widget library built in vanilla JavaScript using the SVG canvas</div>
+
+                <div class="short-description">Project accepted to the <a href="https://webaudioconf.com/" target="blank">2018 Web Audio Conference</a></div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/kiteaudio">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/kiteaudio.gif" />
+
+            <div class="project-description">
+                <p>
+                The purpose of this project was to provide a zero-dependency library of SVG-based UI widgets that could be used for building
+                audio applications.
+                </p>
+
+                <p>
+                The development of the project addressed three areas of concern:
+                how to structure the code base and class design to facilitate long-term development; 
+                how to structure state management for consistent behavior and easy-to-implement feature changes; 
+                how to structure the audio modules to facilitate behavior sharing, confinement of responsibilities, and flexibility in an audio application architecture.
+                </p>
+
+                <p>
+                The codebase is structured around abstract base classes which implement the core functionality, state management, and initialization, and additional functionality is provided by mixins. Each specific class is required to conform to the contract specified by the base class. This codebase structure allows for robust long-term development, ensuring that each new implemented module relies on a solid base of core functionality, and is concerned only with implementing the specific behavior required by the module.
+                State management is implemented using a single-source-of-truth approach where component state is stored in the simplest possible representation and propagated throughout the component on each state change. This design allows for predictable behavior, business logic that is easy to reason about, and confinement of behavior so that feature changes may be trivially implemented without breaking the component.   
+                </p>
+            </div>
+        </article>
+
+        <article>
+            <header>
+                <h1>Weathervane</h1>
+
+                <div class="short-description">A weather forecast app built with <em>AngularJS</em></div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/weathervane" target="blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </article>
+
+        <article>
+            <header>
+                <h1>JS Object Constraint</h1>
+
+                <div class="short-description">A tool to constrain JavaScript object properties to specified limists</div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/js_object_constraint" target="blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <img class="demo-image" src="resources/images/js_object_constraint.png" />
+
+            <div class="project-description">
+                <p>
+                Used to apply a constraining function to a state object of arbitrary nestedness,
+                whose leaves are values that need to be constrained (i.e. to min or max values).
+                In order for ConstraintSpec to work properly, it's constructor must be given an object that
+                exactly mirrors the nested structure of the object to be constrained, with the leaves
+                containing instances of the Constraint class.
+                </p>
+            </div>
+            
+        </article>
+
+        <article>
+            <header>
+                <h1>Watch-n-mirror</h1>
+
+                <div class="short-description">
+                    A bash tool for development under Linux to watch a directory for changes and mirror it to a different directory with
+                    arbitrary ownership and privileges. Requires inotifywait.
+                </div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/watchnmirror">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/watch_n_mirror.png" />
+        </article>
+
+        <article>
+            <header>
+                <h1>Tiny Animation</h1>
+
+                <div class="short-description">A tiny in-progress library for canvas-based animation</div>
+            </header>
+        </article>
+
+
+
+    </div> <!-- /.projects -->
+</body>
+</html>

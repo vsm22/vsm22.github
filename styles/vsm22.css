@@ -1,0 +1,123 @@
+body {
+    background-color: #fff;
+    color: #555;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+
+a {
+    color: #008cff;
+}
+
+a:hover {
+    color: #008cff;
+    text-decoration: underline;
+}
+
+/* ============================ */
+/* MAIN HEADER
+/* ============================ */
+
+body > header {
+    padding: 2rem;
+    font-family: Arial;
+    min-height: 140px;
+}
+
+body > header > h1 {
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+body > header > h2 {
+    font-size: 1.8rem;
+}
+
+body > header > nav {
+    list-style-type: none;
+}
+
+body > header > nav li {
+    display: inline-block;
+    font-size: 3rem;
+    margin-right: 3rem;
+}
+
+body > header > nav li a:hover {
+    color: #00e1ff;
+}
+
+/* ============================= */
+/* PROJECTS
+/* ============================= */
+
+.projects {
+    padding: 2rem;
+}
+
+.projects > header > h1 {
+    border-top: 1px solid #ccc;
+    font-size: 1.7rem;
+    color: #888;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+article {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 1rem 4rem 1rem;
+    margin-bottom: 4rem;
+}
+
+article h1 {
+    font-size: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+article .short-description {
+    padding-bottom: 1rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: bold;
+    color: #555;
+}
+
+article .short-description em {
+    text-decoration: italic;
+    color: #424242;
+}
+
+article nav ul {
+    margin-top: 1rem;
+    list-style-type: none;
+    font-size: 1.6rem;
+}
+
+article .technologies-used {
+    padding-bottom: 0.7rem;
+}
+
+img.demo-image {
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    width: 600px;
+    background-color: #eee;
+}
