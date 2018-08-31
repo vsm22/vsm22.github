@@ -47,12 +47,9 @@
 
                 <div class="short-description"> A music database browser and manager built with <em>Spring</em> and <em>React</em> </div>
 
-                <div class="technologies-used">Languages: <b> Java, JavaScript </b></div>
-
-                <div class="technologies-used">Technologies: <b>Spring Boot, Spring Web MVC, Spring Security, Java JWT, Hibernate, Hibernate Search, Jackson, Lombok, MySQL, React, React Router</b></div>
-          
-                <div class="technologies-used">
-                    Dev technologies: <b>Docker, Maven, npm, Webpack</b>
+                <div class="technologies-used">Technologies used: <em>Java, JavaScript, Spring Boot, Spring Web MVC, 
+                    Spring Security, Java JWT, Hibernate, Hibernate Search, Jackson, Lombok, MySQL, React, React Router,
+                    Docker, Maven, npm, Webpack</em>
                 </div>
 
                 <nav>
@@ -64,6 +61,17 @@
                                 </span>
                                 <span>
                                     source
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="blank">
+                                <span>
+                                    <i class="fas fa-desktop"></i>
+                                </span>
+                                <span>
+                                    live demo
                                 </span>
                             </a>
                         </li>
@@ -132,6 +140,27 @@
                                 </span>
                             </a>
                         </li>
+                        <li>
+                            <a href="#" target="blank">
+                                <span>
+                                    <i class="fas fa-desktop"></i>
+                                </span>
+                                <span>
+                                    live demo
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="blank">
+                                <span>
+                                    <i class="fas fa-book-open"></i>
+                                </span>
+                                <span>
+                                    doc
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -176,9 +205,78 @@
                                 </span>
                             </a>
                         </li>
+
+                        <li>
+                            <a href="#" target="blank">
+                                <span>
+                                    <i class="fas fa-desktop"></i>
+                                </span>
+                                <span>
+                                    live demo
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </header>
+        </article>
+
+        <article>
+            <header>
+                <h1>Moolti</h1>
+
+                <div class="short-description">A tiny in-progress library for canvas-based animation</div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/moolti" target="blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <img class="demo-image" src="resources/images/tinyanimation.gif" />
+
+            <div class="project-description">
+                <p>
+                The idea for this library is to be able to create canvas animations declaratively by
+                specifying 'anchors' that define how the animation evolves over time, creating 
+                figures, and attaching properties of these figures to the anchors.
+                </p>
+
+                <p>
+                For example, creating an arc that travels along a linear path from (0, 0) to (500, 100)
+                with velocity 0.1 would look something like this:
+                </p>
+
+                <pre><code>
+let animator = new Animator(canvas);
+
+let anchor1 = animator.createAnchor({},
+    Transform()
+        .getDistance({"v": 0.1})
+        .positionOnLinearPath({"x0": 0, "y0": 0, "x1": 500, "y1": 100})
+        .go()
+);
+
+let arc = new Arc(animator, {
+    fillStyle: () => "rgb(" + anchor1.linked("d")() + ",100,120",
+    cx: anchor1.linked("x"),
+    cy: anchor1.linked("y"),
+    r: 10
+});
+                </code></pre>
+
+            </div>
+
         </article>
 
         <article>
@@ -213,6 +311,7 @@
                 exactly mirrors the nested structure of the object to be constrained, with the leaves
                 containing instances of the Constraint class.
                 </p>
+
             </div>
             
         </article>
@@ -243,29 +342,17 @@
             </header>
 
             <img class="demo-image" src="resources/images/watch_n_mirror.png" />
-        </article>
 
-        <article>
-            <header>
-                <h1>Tiny Animation</h1>
+            <div class="project-description">
+                
+                <p>
+                    This is a simple-as-pie bash tool. It watches a directory for changes and copies changes to a second directory with
+                    arbitrary ownership and priviliges that you set. This is useful if you want to, for exmaple, work on a project as 
+                    one user, and have it served by a server that is running as a different user when the server needs to be able to 
+                    modify files in the project.
+                </p>
 
-                <div class="short-description">A tiny in-progress library for canvas-based animation</div>
-
-                <nav>
-                    <ul> 
-                        <li>
-                            <a href="https://github.com/vsm22/moolti" target="blank">
-                                <span>
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>
-                                    source
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            </div>
 
         </article>
 
@@ -293,6 +380,16 @@
 
             <img class="demo-image" src="resources/images/maxtools.png"
 
+            <div class="project-description">
+
+                <p>
+                <a href="https://cycling74.com/" target="blank">Max</a> is my go-to tool for building anything audio-related.
+                Besides its own rich collection of objects, it allows integrating JavaScript, Java, Python, as well as compiling 
+                Max objects from C or C++. I've recently started to be more organized about maintaining tools I build for 
+                max and putting them in this repo. 
+                </p>
+
+            </div>
         </article>
 
         <article>
@@ -317,13 +414,20 @@
                 </nav>
             </header>
 
-            <img class="demo-image" src="resources/images/genna.png"
+            <img class="demo-image" src="resources/images/genna.png" />
+
+            <div class="project-description">
+                A generative instrument built in Max that I used for part of my dissertation at Duke. 
+                It generates rhythm based on a probability histogram, generates notes based on a 'kernel'
+                and 'offset' definition, and manipulates samples by rhythmic granular splicing.
+                You can hear some of the results <a href="https://vladimirsmirnov.bandcamp.com/album/appalachiana" target="blank">here</a>.
+            </div>
 
         </article>
 
         <article>
             <header>
-                <h1>JHF Photobooth</h1>
+                <h1>JHF Photo-booth</h1>
 
                 <div class="short-description">Max and JavaScript code for an interactive art installation for John Hope Franklin's centennial celebration</div>
 
@@ -345,6 +449,16 @@
 
             <img class="demo-image" src="resources/images/jhf_photobooth.jpg"
 
+            <div class="project-description">
+                <p>
+                When I worked with Slippage, one of our tasks was to create an installation for John Hope Franklin's centennial celebration
+                at the Nasher Museum. The installation would resemble a photo-booth, where instead of taking photos, visitors would record
+                their testimonies regarding the influence of John Hope Franklin's work on them. There were some distinguished guests, including
+                the activist Angela Davis. The 'photo-booth' would integrate the testimonies in real-time into a video collage playing
+                on the outside, interspersed with John Franklin's own interviews. I used Max and JavaScript for the project, with Max's Jitter
+                components handling the video processing, and JavaScript to provide the master controller that links the different elements. 
+                </p>
+            </div>
         </article>
 
     </div> <!-- /.projects -->
