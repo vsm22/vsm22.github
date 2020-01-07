@@ -1,399 +1,499 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' href='./styles/vsm22-2.min.css'>
-  <link rel='stylesheet' type='text/css' href='./assets/genericons/genericons.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles/milligram.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/vsm22.css" />
+    <link rel="stylesheet" type="text/css" href="resources/fonts/font-awesome/css/all.min.css" />
+    <title>Vladimir Smirnov</title>
 </head>
 <body>
-  <div class='page-container'>
-    <div id='front-page-canvas-wrap'>
-      <canvas id='canvas-animation'></canvas>
-    </div>
+    
+    <header>
+        <h1>Vladimir Smirnov</h1>
 
-    <div id='sticky-return-to-top'>
-      <a href='#main-header'>
-        <span class="genericon genericon-top"></span>
-      </a>
-    </div>
+        <h2>A page for my personal and learning projects</h2>
 
-    <nav id='sticky-nav'>
-      <div id='sticky-title'> Vladimir Smirnov </div>
-      <ul id='sticky-site-nav'>
-        <li>
-          <a id='projects-link-sticky' href='#projects'> projects </a>
-        </li>
-        <li>
-          <a id='contact-link-sticky' href='#contact'> contact </a>
-        </li>
-        <li>
-          <a href='#main-header'>
-            <span id='top-link-sticky' class="genericon genericon-top"></span>
-          </a>
-        </li>
-      </ul>
-      <nav class='external-links'>
-        <ul>
-          <li>
-            <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
-          </li>
-          <li>
-            <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
-          </li>
-      </nav>
-    </nav>
-
-    <div id='main-header'>
-      <h1 id='main-title'>
-        <div> vladimir </div>
-        <div> smirnov </div>
-      </h1>
-
-      <div id='main-description'>
-        <h2>
-          <div> software & web developer </div>
-        </h2>
-      </div>
-
-      <nav id='main-nav'>
-        <ul>
-          <li>
-            <a id='projects-link' href='#projects'> projects </a>
-          </li>
-          <li>
-            <a id='contact-link' href='#contact'> contact </a>
-          </li>
-        </ul>
-      </nav>
-
-      <nav class='external-links'>
-        <ul>
-          <li>
-            <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
-          </li>
-          <li>
-            <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
-          </li>
-      </nav>
-    </div> <!-- /#main-header -->
-
-    <!-- #projects -->
-    <div class='section-container' id='projects'>
-
-      <div class='section-header'>
-        <div class='section-title'>
-          <h1> Recent Projects </h1>
-        </div>
-      </div>
-
-      <div class='subsection-container project' id='additor'>
-        <nav class='projects-flip-nav'>
-          <a href='#weathervane' class='next-project-arrow'></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/vsm22/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
         </nav>
+    </header>
 
-        <div class='project-header'>
-          <h2> Additor </h2>
-          <h3> a synth based on the Web Audio API </h3>
-        </div>
+    <div class="projects">
 
-        <div class='project-image'>
-          <a href='https://vsm22.github.io/additor' target='_blank'><img src='./images/additor1_cropped.png'></img></a>
-        </div>
+        <header>
+            <h1> Some projects: </h1>
+        </header>
 
-        <div class='project-content'>
-          <nav class='project-links'>
-            <span><a href='https://vsm22.github.io/additor' target='_blank'> Live Version </a><span>
-            <span><a href='https://github.com/vsm22/additor' target='_blank'> Source Code </a><span>
-          </nav>
+        <article>
+            <header>
+                <h2>GN-Launchpad</h2>
 
-          <ul class='project-keywords'>
-            <li> JavaScript </li>
-            <li> Web Audio API </li>
-            <li> Canvas </li>
-            <li> RequireJS </li>
-          </ul>
+                <div class="short-description">A JSON-configurable host environment for the Novation Launchpad</div>
 
-          <p class='project-description'>
-            Additor is a browser-based <a href='https://en.wikipedia.org/wiki/Additive_synthesis' target='_blank'>additive synthesizer</a> app built in vanilla JavaScript using a custom library of components.
-            The audio engine is built using the Web Audio API and implements a set of audio classes in a hierarchical architecture:
-            the <a href='https://github.com/vsm22/additor/blob/master/src/synth/Overtone.js' target='_blank'> Overtone </a> class represents a single oscillator;
-            the <a href='https://github.com/vsm22/additor/blob/master/src/synth/AdditiveSynthVoice.js' target='_blank'> AdditiveSynthVoice </a> class represents a single synthesizer voice consisting of a bank of overtones;
-            the <a href='https://github.com/vsm22/additor/blob/master/src/synth/AdditiveSynth.js' target='_blank'> AdditiveSynth </a> class represents a synthesizer consisting of a bank of voices.
-            In each level of the hierarchy the components are connected to an <a href='https://github.com/vsm22/additor/blob/master/src/synth/Envelope.js' target='_blank'> Envelope </a>,
-            which represents an audio envelope controlling the evolution of the amplitude of the component over time, specified as arbitrary arrays of time and amplitude pairs,
-            and a <a href='https://github.com/vsm22/additor/blob/master/src/synth/ChannelStrip.js' target='_blank'> ChannelStrip</a>, which controls the panning, input gain, and output gain of the component.
-            The UI is built using a custom library of widgets using the HTML canvas, and loosely modeled on the look of Ableton Live and Max for Live components.
-            Module bundling is done with RequireJS.
-          </p>
-        </div>
-      </div>
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/gn-launchpad" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-      <div class='subsection-container project' id='weathervane'>
-        <nav class='projects-flip-nav'>
-          <a href='#additor' class='prev-project-arrow'></a>
-          <a href='#js-live-widgets' class='next-project-arrow'></a>
-        </nav>
+            <img class="demo-image" src="resources/images/launchpad.jpg" />
 
-        <div class='project-header'>
-          <h2> Weathervane </h2>
-          <h3> weather forecast app based on the Apixu API </h3>
-        </div>
+            <div class="project-description">
+                <p>
+                This is an in-progress project.
+                </p>
 
-        <div class='project-image'>
-          <a href='https://vsm22.github.io/weathervane' target='_blank'><img src='./images/weathervane1.png'></img></a>
-        </div>
+                <p>
+                GN-Launchpad is a host and configuration platform for the Novation Launchpad written in TypeScript with JavaScript compilation target. 
+                The goal of the project is to create a JSON-configurable host that allows users to quickly and with great flexibility configure the 
+                behavior of their Launchpad for custom applications within any MIDI environment. The design follows a JSON-configurable “batteries included, 
+                but removable” approach, which provides sensible defaults, but also allows quick and extensible configuration. Current MIDI host environment 
+                targets include Cycling74 Max and Chrome, while theoretically any MIDI-capable JavaScript environment is possible. 
+                </p>
 
-        <div class='project-content'>
-          <nav class='project-links'>
-            <span><a href='https://vsm22.github.io/weathervane' target='_blank'> Live Version </a></span>
-            <span><a href='https://github.com/vsm22/weathervane' target='_blank'> Source Code </a></span>
-          </nav>
+                <p>
+                The idea is to be able to configure the launchpad behavior with a simple JSON configuration like below.
+                The below configuration means toggle one button on and off, but only one per row.   
+                </p>
 
-          <ul class='project-keywords'>
-            <li> Angular JS </li>
-            <li> Google Maps API </li>
-            <li> Apixu Weather API </li>
-          </ul>
+                <pre><code>
+{
+    "scenes": [{
+        "sceneName": "toggler",
+        "sceneIndex": 0,
+        "handlers": [{
+            "type": "xyButton",
+            "row": "all",
+            "col": "all",
+            "handlerStates": [{
+                "index": 0,
+                "color": "off",
+                "transitions": [{
+                    "eventType": "push",
+                    "toIndex": 1
+                }]
+            },
+            {
+                "index": 1,
+                "color": "red",
+                "transitions": [{
+                    "eventType": "push",
+                    "toIndex": 0
+                }],
+                "sideEffects": [{
+                    "row": "same",
+                    "col": "all",
+                    "color": "off"
+                }]
+            }]
+        }]
+        
+    }]
+}
+                </code></pre>
+            </div>
+        </article>
 
-          <p class='project-description'>
-            Weathervane is a simple weather forecast app built with Angular JS.
-            The app allows users to specify a location in a variety of formats and displays the current weather, and five-day and ten-day forecasts.
-            The angular modules are organized as a component tree and use a component router to switch between the different display modes.
-            The forecast data is received from the <a href='http://www.apixu.com/'>Apixu Weather API</a>,
-            and location geocoding is done with the <a href='https://developers.google.com/maps/' target='_blank'>Google Maps API</a>.
-            A <a href='http://codepen.io/vladvladvlad/pen/wzGYaV' target='_blank'>generative background animation</a> was created using the HTML canvas.
-          </p>
-        </div>
-      </div>
+        <article>
+            <header>
+                <h2>KiteAudio</h2>
 
-      <div class='subsection-container project' id='js-live-widgets'>
-        <nav class='projects-flip-nav'>
-          <a href='#weathervane' class='prev-project-arrow'></a>
-          <a href='#ghost-dancing' class='next-project-arrow'></a>
-        </nav>
+                <div class="short-description">A UI widget library built in vanilla JavaScript using the SVG canvas</div>
 
-        <div class='project-header'>
-          <h2> JS Synth UI </h2>
-          <h3> a mini-library of canvas-based widgets </h3>
-        </div>
+                <div class="short-description">Project accepted to the <a href="https://webaudioconf.com/" target="_blank">2018 Web Audio Conference</a></div>
 
-        <div class='project-image'>
-          <a href='https://github.com/vsm22/JSSynthUI' target='_blank'><img src='./images/JSLiveWidgets.png'></img></a>
-        </div>
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/kiteaudio/tree/dev/src" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kiteaudio-demo/index.html" target="_blank">
+                                <span>
+                                    <i class="fas fa-desktop"></i>
+                                </span>
+                                <span>
+                                    demo
+                                </span>
+                            </a>
+                        </li>
 
-        <div class='project-content'>
-          <nav class='project-links'>
-            <span><a href='https://github.com/vsm22/JSSynthUI' target='_blank'> Source Code </a></span>
-          </nav>
+                        <li>
+                            <a href="kiteaudio-demo/dev-doc/index.html" target="_blank">
+                                <span>
+                                    <i class="fas fa-book-open"></i>
+                                </span>
+                                <span>
+                                    doc
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-          <ul class='project-keywords'>
-            <li> JavaScript </li>
-            <li> Canvas </li>
-          </ul>
+            <img class="demo-image" src="resources/images/kiteaudio.gif" />
 
-          <p class='project-description'>
-            JSLiveWidgets is a mini-library of canvas-based widgets for browser-based audio applications.
-            The library was loosely inspired by and modeled on the look of <a href='https://www.ableton.com' target='_blank'>Ableton Live</a> and <a href='https://www.ableton.com/en/live/max-for-live/' target='_blank'>Max for Live</a> UI components.
-            I have been using <a href='https://cycling74.com/' target='_blank'> Max </a> extensively to prototype multimedia tools in previous projects, and have grown accustomed to having these UI components available.
-            I thought it would be useful to have a similar set of components that are basic, customizable, and pluggable, implemented in JS for use in browser-based audio applications (and potentially in other environments as well via <a href='https://webkitgtk.org/' target='_blank'> WebKitGtk</a>).
-            The project is a work-in-progress, but currently the library has the following components: keyboard, dial, slider, volume meter, envelope graph, histogram, drop-down menu, draggable number box.
-            The library is implemented as class modules that have support for AMD and CommonJS, or can be used as globals.
-            UI interaction is supported for mouse as well as touch events.
-          </p>
-        </div>
-      </div>
+            <div class="project-description">
+                <p>
+                The purpose of this project was to provide a zero-dependency library of SVG-based UI widgets that could be used for building
+                audio applications.
+                </p>
 
-      <div class='subsection-container project' id='ghost-dancing'>
-        <nav class='projects-flip-nav'>
-          <a href='#js-live-widgets' class='prev-project-arrow'></a>
-          <a href='#dissertation' class='next-project-arrow'></a>
-        </nav>
+                <p>
+                The development of the project addressed three areas of concern:
+                how to structure the code base and class design to facilitate long-term development; 
+                how to structure state management for consistent behavior and easy-to-implement feature changes; 
+                how to structure the audio modules to facilitate behavior sharing, confinement of responsibilities, and flexibility in an audio application architecture.
+                </p>
 
-        <div class='project-header'>
-          <h2> Ghost Dancing </h2>
-          <h3> music and sound design for a performance at 2016 moogfest </h3>
-        </div>
+                <p>
+                The codebase is structured around abstract base classes which implement the core functionality, state management, and initialization, and additional functionality is provided by mixins. Each specific class is required to conform to the contract specified by the base class. This codebase structure allows for robust long-term development, ensuring that each new implemented module relies on a solid base of core functionality, and is concerned only with implementing the specific behavior required by the module.
+                State management is implemented using a single-source-of-truth approach where component state is stored in the simplest possible representation and propagated throughout the component on each state change. This design allows for predictable behavior, business logic that is easy to reason about, and confinement of behavior so that feature changes may be trivially implemented without breaking the component.   
+                </p>
+            </div>
+        </article>
 
-        <div class='project-image'>
-          <img src='./images/ghostDancing.png'></img>
-        </div>
+        <article>
 
-        <div class='project-content'>
-          <nav class='project-links'>
-            <span><a href='http://vladimirsmirnov.bandcamp.com/album/ghost-dancing' target='_blank'> Audio </a></span>
-          </nav>
+            <header>
 
-          <ul class='project-keywords'>
-            <li> Max </li>
-            <li> Logic </li>
-          </ul>
+                <h1> Anvil </h1>
 
-          <p class='project-description'>
-            Music and sound design for a multimedia dance performance at the 2016 <a href='http://www.moogfest.com/'> moogfest</a> with Duke's Slippage Performance Tehcnology Lab.
-            The performance was based around two robotic installations developed by the lab, which could move and project images and live video feeds onto their surfaces.
-            During the performance, dancers interacted with these installations in a quasi-imporvisatory structure, and invited audience members to participate.
-            The music was created using a custom instrument based on granular synthesis built in Max and sequenced in Logic Pro.
+                <div class="short-description"> A music database browser and manager built with <em>Spring</em> and <em>React</em> </div>
 
-          </p>
-        </div>
-      </div>
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/anvil" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-      <div class='subsection-container project' id='dissertation'>
-        <nav class='projects-flip-nav'>
-          <a href='#ghost-dancing' class='prev-project-arrow'></a>
-          <a href='#fast-past-dance' class='next-project-arrow'></a>
-        </nav>
+            <img class="demo-image" src="resources/images/anvil.gif" />
 
-        <div class='project-header'>
-          <h2> Dissertation </h2>
-          <h3> dissertation for the PhD in music composition at Duke U </h3>
-        </div>
+            <div class="project-description">
 
-        <div class='project-image'>
-          <img src='./images/dissertation_recording_medium.png'></img>
-        </div>
+                <p>
+                Anvil is a music database browser and manager built with <b>Spring</b> and <b>React</b>. It allows users to 
+                search for music artists, place them in collections, like them, and recommend them to other users.
+                It was built as a learning project.
+                </p>
+            </div>
 
-        <div class='project-content'>
-          <p class='project-description'>
-            A disseration portfolio consisting of 3 parts: two large-scale compositions (acoustic and electronic), and a music theory/analysis article.
-            Commitee: <a href='https://en.wikipedia.org/wiki/Stephen_Jaffe' target='_blank'> Stephen Jaffe</a> (composer, American Academy of Arts and Letters), <a href='http://people.duke.edu/~scott1/' target='_blank'>Scott Lindroth</a> (composer, Duke Vice Provost for the Arts), <a href='http://www.johnsupko.com/' target='_blank'>John Supko</a> (composer, Duke Director of Graduate Studies in music), and <a href='http://billseaman.com/' target='_blank'>Bill Seaman</a> (multimedia artist).
-          </p>
+        </article>
 
-          <h4> Part 1: Acoustic composition "Double Rainbow" (10 instruments, ca. 35 mins) </h4>
+        
 
-          <nav class='project-links'>
-            <span><a href='http://vladimirsmirnov.bandcamp.com/album/double-rainbow' target='_blank'> Audio </a></span>
-            <span><a href='./assets/double_rainbow_score.pdf' target='_blank'> Score </a></span>
-          </nav>
+        <article>
+            <header>
+                <h1>Weathervane</h1>
 
-          <p class='project-description'>
-          A composition in four movements with the following instrumentation: flute, clarinet (dbl. bass clarinet), saxophones (alto, tenor), horn, violin, viola, cello, double bass, piano, percussion.
-          Recorded by <a href='http://www.ymusicensemble.com' target='_blank'>yMusic</a> and <a href='http://www.jbjazz.com/' target='_blank'>John Brown</a>, <a href='http://www.ncameronbritt.com/' target='_blank'>Cameron Britt</a>, <b>Blake Ray</b>.
-          </p>
+                <div class="short-description">A weather forecast app built with <em>AngularJS</em></div>
 
-          <h4> Part 2: Electronic composition "Appalachiana" (Max, Logic, ca. 35 mins) </h4>
+                <div class="technologies-used">Technologies: <em>AngularJS</em></div>
+                
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/weathervane" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-          <nav class='project-links'>
-            <span><a href='http://vladimirsmirnov.bandcamp.com/album/appalachiana' target='_blank'> Audio </a><span>
-          </nav>
+            <img class="demo-image" src="resources/images/weathervane.png" />
 
-          <p class='project-description'>
-          An electronic music composition in four movements based on original instruments developed in <a href='https://www.cycling74.com' target='_blank'> Max. </a>
-          </p>
+            <div class="project-description">
+                <p>
+                A weather forecast app built with AngularJS. Uses the Google Maps API to geocode a variety of location formats
+                (i.e. address, zipcode, landmark name etc.) and the Apixu API to grab forecast data. Provides current weather,
+                5, and 10-day forecasts. Has a custom background animation using the html canvas. 
+                </p>
+            </div>
+        </article>
 
-          <h4> Part 3: Music theory article "'The Invisible Mass': Compositional Technique in Alfred Schnittke's 2nd Symphony" </h4>
+        <article>
+            <header>
+                <h1>Moolti</h1>
 
-          <nav class='project-links'>
-            <span><a href='./assets/InvisibleMassSchnittkeArticle.pdf' target='_blank'> pdf </a></span>
-          </nav>
+                <div class="short-description">A tiny in-progress library for canvas-based animation</div>
 
-          <p class='project-description'>
-            An analytical article focusing on the musical form, harmony, and orchestration in <a href='http://www.universaledition.com/composers-and-works/Alfred-Schnittke/composer/651/work/337' target='_blank'>Alfred Schnittke's Second Symphony (1979)</a>, based on original research, source translation, and musical analysis.
-          </p>
-      </div>
-    </div>
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/moolti" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <img class="demo-image" src="resources/images/tinyanimation.gif" />
 
-      <div class='subsection-container project' id='fast-past-dance'>
-        <nav class='projects-flip-nav'>
-          <a href='#dissertation' class='prev-project-arrow'></a>
-          <a href='#jhf-photobooth' class='next-project-arrow'></a>
-        </nav>
+            <div class="project-description">
+                <p>
+                The idea for this library is to be able to create canvas animations declaratively by
+                specifying 'anchors' that define how the animation evolves over time, creating 
+                figures, and attaching properties of these figures to the anchors.
+                </p>
 
-        <div class='project-header'>
-          <h2> FastPastDance </h2>
-          <h3> music and sound design for a performance at Detroit Institute of Arts </h3>
-        </div>
+                <p>
+                For example, creating an arc that travels along a linear path from (0, 0) to (500, 100)
+                with velocity 0.1 would look something like this:
+                </p>
 
-        <div class='project-image'>
-          <a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'><img src='./images/detroitDance.png'></img></a>
-        </div>
+                <pre><code>
+let animator = new Animator(canvas);
 
-        <div class='project-content'>
-          <nav class='project-links'>
-            <span><a href='https://vladimirsmirnov.bandcamp.com/album/fastpastdance' target='_blank'> Audio </a></span>
-          </nav>
+let anchor1 = animator.createAnchor({},
+    Transform()
+        .getDistance({"v": 0.1})
+        .positionOnLinearPath({"x0": 0, "y0": 0, "x1": 500, "y1": 100})
+        .go()
+);
 
-          <ul class='project-keywords'>
-            <li> Max </li>
-            <li> Logic </li>
-          </ul>
+let arc = new Arc(animator, {
+    fillStyle: () => "rgb(" + anchor1.linked("d")() + ",100,120",
+    cx: anchor1.linked("x"),
+    cy: anchor1.linked("y"),
+    r: 10
+});
+                </code></pre>
 
-          <p class='project-description'>
-            Music and sound design for a multimedia dance performance at the opening of the <a href='http://www.dia.org/calendar/exhibition.aspx?id=5396&iid='> "Dance! American Art 1830-1960"</a> exhibition at the <a href='http://www.dia.org/'>Detroit Institute of Arts</a> with Duke's Slippage Performance Technology lab.
-            The performance used a custom-built green-screen interface to overlay dancers onto projections of artwork from the exhibition.
-            The music consisted of transformations of existing American musical works for dance using custom instruments built in Max and sequenced in Logic Pro.
-          </p>
-        </div>
-      </div>
+            </div>
 
-      <div class='subsection-container project' id='jhf-photobooth'>
-        <nav class='projects-flip-nav'>
-          <a href='#fast-past-dance' class='prev-project-arrow'></a>
-        </nav>
+        </article>
 
-        <div class='project-header'>
-          <h2> John Hope Franklin Photobooth </h2>
-          <h3> code for an interactive installation at the Nasher Museum</h3>
-        </div>
+        <article>
+            <header>
+                <h1>JS Object Constraint</h1>
 
-        <div class='project-image'>
-          <img src='./images/jhf.jpg'></img>
-        </div>
+                <div class="short-description">A tool to constrain JavaScript object properties to specified limists</div>
 
-        <div class='project-content'>
-          <nav class='project-links'>
-            <span><a href='https://github.com/vsm22/VideoPhotoBooth-for-John-Hope-Franklin-Centennial' target='_blank'> Code </a></span>
-          </nav>
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/js_object_constraint" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <img class="demo-image" src="resources/images/js_object_constraint.png" />
 
-          <ul class='project-keywords'>
-            <li> Max </li>
-            <li> JavaScript </li>
-          </ul>
+            <div class="project-description">
+                <p>
+                Used to apply a constraining function to a state object of arbitrary nestedness,
+                whose leaves are values that need to be constrained (i.e. to min or max values).
+                In order for ConstraintSpec to work properly, it's constructor must be given an object that
+                exactly mirrors the nested structure of the object to be constrained, with the leaves
+                containing instances of the Constraint class.
+                </p>
 
-          <p class='project-description'>
-            Code for a multimedia installation at the <a href='http://nasher.duke.edu/'>Nasher Museum</a> for the <a href='https://jhf100.duke.edu/' target='_blank'>John Hope Franklin Centenary</a> celebration.
-            The installation played interviews with John Hope Franklin on screens installed on the outside of the booth,
-            and allowed visitors to record testimonials and responses to his legacy, projecting the videos as overlays of the recorded interviews, and creating a database of the responses.
-          </p>
-        </div>
-      </div>
-    </div> <!-- /#projects -->
+            </div>
+            
+        </article>
 
-    <!-- #links -->
-    <div class='section-container' id='contact'>
+        <article>
+            <header>
+                <h1>Watch-n-mirror</h1>
 
-      <div class='section-header'>
-        <div class='section-title'>
-          <h1> Contact </h1>
-        </div>
-      </div>
+                <div class="short-description">
+                    A bash tool for development under Linux to watch a directory for changes and mirror it to a different directory with
+                    arbitrary ownership and privileges. Requires inotifywait.
+                </div>
 
-      <div class='subsection-container' id='contact-sheet'>
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/watchnmirror">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
+            <img class="demo-image" src="resources/images/watch_n_mirror.png" />
 
-        <nav class='external-links'>
-          <ul>
-            <li>
-              <a href='https://github.com/vsm22' class='githubIcon' target='_blank'></a>
-            </li>
-            <li>
-              <a href='https://www.linkedin.com/in/vladimir-smirnov-463b6123' class='linkedInIcon' target='_blank'></a>
-            </li>
-        </nav>
+            <div class="project-description">
+                
+                <p>
+                    This is a simple-as-pie bash tool. It watches a directory for changes and copies changes to a second directory with
+                    arbitrary ownership and priviliges that you set. This is useful if you want to, for exmaple, work on a project as 
+                    one user, and have it served by a server that is running as a different user when the server needs to be able to 
+                    modify files in the project.
+                </p>
 
-        <div> <a href='mailto:vssmirnov@gmail.com'>vssmirnov@gmail.com</a> </div>
-        <div id='profile-picture-wrap'>
-          <img src='./images/profile.png' id='profile-picture'></img>
-        </div>
-      </div>
-    </div> <!-- /#contact-sheet -->
+            </div>
 
-  </div> <!-- /.page-container -->
-</body>
+        </article>
 
-  <script src='./lib/jquery.min.js'></script>
-  <script src='./build/animations/tesseracts2.js'></script>
-  <script src='./build/main-ctrl.js'></script>
+        <article>
+            <header>
+                <h1>Max Tools</h1>
 
+                <div class="short-description">An ongoing collection of Max tools</div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/maxtools" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/maxtools.png" />
+
+            <div class="project-description">
+
+                <p>
+                <a href="https://cycling74.com/" target="_blank">Max</a> is my go-to tool for building anything audio-related.
+                Besides its own rich collection of objects, it allows integrating JavaScript, Java, Python, as well as compiling 
+                Max objects from C or C++. I've recently started to be more organized about maintaining tools I build for 
+                max and putting them in this repo. 
+                </p>
+
+            </div>
+        </article>
+
+        <article>
+            <header>
+                <h1>Genna</h1>
+
+                <div class="short-description">A generative sampler instrument built in Max</div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/Genna" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/genna.png" />
+
+            <div class="project-description">
+                A generative instrument built in Max that I used for part of my dissertation at Duke. 
+                It generates rhythm based on a probability histogram, generates notes based on a 'kernel'
+                and 'offset' definition, and manipulates samples by rhythmic granular splicing.
+                You can hear some of the results <a href="https://vladimirsmirnov.bandcamp.com/album/appalachiana" target="_blank">here</a>.
+            </div>
+
+        </article>
+
+        <article>
+            <header>
+                <h1>JHF Photo-booth</h1>
+
+                <div class="short-description">Max and JavaScript code for an interactive art installation for John Hope Franklin's centennial celebration</div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/jhf_photobooth" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/jhf_photobooth.jpg" />
+
+            <div class="project-description">
+                <p>
+                When I worked with Slippage, one of our tasks was to create an installation for John Hope Franklin's centennial celebration
+                at the Nasher Museum. The installation would resemble a photo-booth, where instead of taking photos, visitors would record
+                their testimonies regarding the influence of John Hope Franklin's work on them. There were some distinguished guests, including
+                the activist Angela Davis. The 'photo-booth' would integrate the testimonies in real-time into a video collage playing
+                on the outside, interspersed with John Franklin's own interviews. I used Max and JavaScript for the project, with Max's Jitter
+                components handling the video processing, and JavaScript to provide the master controller that links the different elements. 
+                </p>
+            </div>
+        </article>
+
+    </div> <!-- /.projects -->
 </body>
 </html>
