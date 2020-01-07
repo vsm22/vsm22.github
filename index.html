@@ -14,16 +14,10 @@
     <header>
         <h1>Vladimir Smirnov</h1>
 
-        <h2>Programmer, software and web developer</h2>
+        <h2>A page for my personal and learning projects</h2>
 
         <nav>
             <ul>
-                <li>
-                    <a href="https://github.com/vsm22" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                
                 <li>
                     <a href="https://www.linkedin.com/in/vsm22/" target="_blank">
                         <i class="fab fa-linkedin"></i>
@@ -36,26 +30,19 @@
     <div class="projects">
 
         <header>
-            <h1> Recent personal and learning projects: </h1>
+            <h1> Some projects: </h1>
         </header>
-    
+
         <article>
-
             <header>
+                <h2>GN-Launchpad</h2>
 
-                <h1> Anvil </h1>
-
-                <div class="short-description"> A music database browser and manager built with <em>Spring</em> and <em>React</em> </div>
-
-                <div class="technologies-used">Technologies used: <em>Java, JavaScript, Spring Boot, Spring Web MVC, 
-                    Spring Security, Java JWT, Hibernate, Hibernate Search, Jackson, Lombok, MySQL, React, React Router,
-                    Docker, Maven, npm, Webpack</em>
-                </div>
+                <div class="short-description">A JSON-configurable host environment for the Novation Launchpad</div>
 
                 <nav>
                     <ul> 
                         <li>
-                            <a href="https://github.com/vsm22/anvil" target="_blank">
+                            <a href="https://github.com/vsm22/gn-launchpad" target="_blank">
                                 <span>
                                     <i class="fab fa-github"></i>
                                 </span>
@@ -64,60 +51,66 @@
                                 </span>
                             </a>
                         </li>
-
-                        <li>
-                            <a href="http://anvil-env.pkm8xchkff.us-east-2.elasticbeanstalk.com" target="_blank">
-                                <span>
-                                    <i class="fas fa-desktop"></i>
-                                </span>
-                                <span>
-                                    demo
-                                </span>
-                            </a>
-                        </li>
                     </ul>
                 </nav>
             </header>
 
-            <img class="demo-image" src="resources/images/anvil.gif" />
+            <img class="demo-image" src="resources/images/launchpad.jpg" />
 
             <div class="project-description">
+                <p>
+                This is an in-progress project.
+                </p>
 
                 <p>
-                Anvil is a music database browser and manager built with <b>Spring</b> and <b>React</b>. It allows users to 
-                search for music artists, place them in collections, like them, and recommend them to other users.
-                It was built as a learning project.
-                Here are some of its features and technologies:
+                GN-Launchpad is a host and configuration platform for the Novation Launchpad written in TypeScript with JavaScript compilation target. 
+                The goal of the project is to create a JSON-configurable host that allows users to quickly and with great flexibility configure the 
+                behavior of their Launchpad for custom applications within any MIDI environment. The design follows a JSON-configurable “batteries included, 
+                but removable” approach, which provides sensible defaults, but also allows quick and extensible configuration. Current MIDI host environment 
+                targets include Cycling74 Max and Chrome, while theoretically any MIDI-capable JavaScript environment is possible. 
                 </p>
-                
-                <ul>
-                    <li>
-                        RESTful backend architecture implemented using <b>Spring Web MVC</b>
-                    </li>
-                    <li>
-                        Authentication using <b>Spring Security</b> and <b>JSON Web Tokens</b>
-                    </li>
-                    <li>
-                        Front-end UI using <b>React</b>
-                    </li>
-                    <li>
-                        View routing using <b>React Router</b>
-                    </li>
-                    <li>
-                        Database using <b>MySQL</b>
-                    </li>
-                    <li>
-                        Back-end model mapping using <b>Hibernate</b> and <b>Jackson</b>
-                    </li>
-                    <li>
-                        Search indexing using <b>Hibernate Search</b>
-                    </li>
-                    <li>
-                        Java boilerplate using <b>Lombok</b>
-                    </li>
-                </ul>
-            </p>
 
+                <p>
+                The idea is to be able to configure the launchpad behavior with a simple JSON configuration like below.
+                The below configuration means toggle one button on and off, but only one per row.   
+                </p>
+
+                <pre><code>
+{
+    "scenes": [{
+        "sceneName": "toggler",
+        "sceneIndex": 0,
+        "handlers": [{
+            "type": "xyButton",
+            "row": "all",
+            "col": "all",
+            "handlerStates": [{
+                "index": 0,
+                "color": "off",
+                "transitions": [{
+                    "eventType": "push",
+                    "toIndex": 1
+                }]
+            },
+            {
+                "index": 1,
+                "color": "red",
+                "transitions": [{
+                    "eventType": "push",
+                    "toIndex": 0
+                }],
+                "sideEffects": [{
+                    "row": "same",
+                    "col": "all",
+                    "color": "off"
+                }]
+            }]
+        }]
+        
+    }]
+}
+                </code></pre>
+            </div>
         </article>
 
         <article>
@@ -186,6 +179,73 @@
                 </p>
             </div>
         </article>
+
+        <article>
+
+            <header>
+
+                <h1> Anvil </h1>
+
+                <div class="short-description"> A music database browser and manager built with <em>Spring</em> and <em>React</em> </div>
+
+                <nav>
+                    <ul> 
+                        <li>
+                            <a href="https://github.com/vsm22/anvil" target="_blank">
+                                <span>
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>
+                                    source
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <img class="demo-image" src="resources/images/anvil.gif" />
+
+            <div class="project-description">
+
+                <p>
+                Anvil is a music database browser and manager built with <b>Spring</b> and <b>React</b>. It allows users to 
+                search for music artists, place them in collections, like them, and recommend them to other users.
+                It was built as a learning project.
+                Here are some of its features and technologies:
+                </p>
+                
+                <ul>
+                    <li>
+                        RESTful backend architecture implemented using <b>Spring Web MVC</b>
+                    </li>
+                    <li>
+                        Authentication using <b>Spring Security</b> and <b>JSON Web Tokens</b>
+                    </li>
+                    <li>
+                        Front-end UI using <b>React</b>
+                    </li>
+                    <li>
+                        View routing using <b>React Router</b>
+                    </li>
+                    <li>
+                        Database using <b>MySQL</b>
+                    </li>
+                    <li>
+                        Back-end model mapping using <b>Hibernate</b> and <b>Jackson</b>
+                    </li>
+                    <li>
+                        Search indexing using <b>Hibernate Search</b>
+                    </li>
+                    <li>
+                        Java boilerplate using <b>Lombok</b>
+                    </li>
+                </ul>
+            </p>
+
+        </article>
+
+        
 
         <article>
             <header>
@@ -379,7 +439,7 @@ let arc = new Arc(animator, {
                 </nav>
             </header>
 
-            <img class="demo-image" src="resources/images/maxtools.png"
+            <img class="demo-image" src="resources/images/maxtools.png" />
 
             <div class="project-description">
 
@@ -448,7 +508,7 @@ let arc = new Arc(animator, {
                 </nav>
             </header>
 
-            <img class="demo-image" src="resources/images/jhf_photobooth.jpg"
+            <img class="demo-image" src="resources/images/jhf_photobooth.jpg" />
 
             <div class="project-description">
                 <p>
